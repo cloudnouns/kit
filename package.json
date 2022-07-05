@@ -1,6 +1,6 @@
 {
 	"name": "@cloudnouns/kit",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"author": "Badu Blanc <itsbadu@hey.com>",
 	"repository": "git://github.com/cloudnouns/kit.git",
 	"type": "module",
