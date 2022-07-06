@@ -12,28 +12,42 @@ The CLOUDNOUNS Kit is a JavaScript library that makes creating Nouns dead simple
 
 ## Quick start
 
+Install with your favorite package manager...
+
 ```bash
 npm install @cloudnouns/kit
 # or
 yarn add @cloudnouns/kit
 ```
 
+... import into your project...
+
 ```js
 import { Noun } from '@cloudnouns/kit';
+```
 
+... initialize a new Noun...
+
+```js
+// ... initialization
 const myNoun = new Noun();
+```
+
+... and use generously.
+
+```jsx
+// ... usage
+<img src={myNoun.images.svg} alt="noun" />
 ```
 
 ### Try it out
 
-You can use the CodeSandbox links below to try out the library:
+Use the CodeSandbox links below to try out the library:
 
-- ...
-
-## Examples
-
-...
+- [React](https://codesandbox.io/s/kit-example-react-7wgzhy)
+- [Svelte](https://codesandbox.io/s/kit-example-svelte-87vekr)
+- [Vue](https://codesandbox.io/s/kit-example-vue-2vuvkr)
 
 ## Options
 
-...
+See [our documentation](https://docs.cloudnouns.com) for full capabilities.

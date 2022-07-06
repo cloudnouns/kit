@@ -1193,6 +1193,11 @@ hex-color-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
 
+highlight.js@11.5.0:
+  version "11.5.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-11.5.0.tgz#00abb7ed926491adbdabc93a4f3fd2b88b451b4a"
+  integrity sha512-SM6WDj5/C+VfIY8pZ6yW6Xa0Fm1tniYVYWYW1Q/DcMnISZFrC3aQAZZZFAAZtybKNrGId3p/DNbFTtcTXXgYBw==
+
 ignore@^5.1.8, ignore@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
@@ -1906,6 +1911,13 @@ svelte-check@^2.7.0:
     source-map "^0.7.3"
     svelte-preprocess "^4.0.0"
     typescript "*"
+
+svelte-highlight@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/svelte-highlight/-/svelte-highlight-6.1.2.tgz#aed8ac838c8f198f6bfa520d997bdcc6c349eefa"
+  integrity sha512-Oe78gBhU8YrQSA9K8mBYn23oNLtitEi7dO0AvKmDKHqNvQR9WCBFT6BhPPWXC7ONInH8F6dv4hRrgJYJM7iXOw==
+  dependencies:
+    highlight.js "11.5.0"
 
 svelte-hmr@^0.14.11:
   version "0.14.11"
