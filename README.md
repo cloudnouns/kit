@@ -29,14 +29,12 @@ import { Noun } from '@cloudnouns/kit';
 ... initialize a new Noun...
 
 ```js
-// ... initialization
 const myNoun = new Noun();
 ```
 
 ... and use generously.
 
 ```jsx
-// ... usage
 <img src={myNoun.images.svg} alt="noun" />
 ```
 
