@@ -54,14 +54,14 @@ For more information, check out [our documentation](https://docs.cloudnouns.com)
 
 Each prop is optional. If no props are provided, a random Noun will be generated and returned.
 
-| prop   | type                | default                                                              |     |
-| ------ | ------------------- | -------------------------------------------------------------------- | --- |
-| style  | `string`            | `classic`                                                            |     |
-| traits | `object` or `array` | n/a                                                                  |     |
-| text   | `string`            | n/a                                                                  |     |
-| hash   | `string`            | `0xcc60b76e3f2389009a480d62ceddae8091b46b86bb8d0370206a49e9edf9cd16` |     |
-| hex    | `string`            | n/a                                                                  |     |
-| size   | `number`            | `320`                                                                |     |
+| prop   | type                | default                                                              |
+| ------ | ------------------- | -------------------------------------------------------------------- |
+| style  | `string`            | `classic`                                                            |
+| traits | `object` or `array` | n/a                                                                  |
+| text   | `string`            | n/a                                                                  |
+| hash   | `string`            | `0xcc60b76e3f2389009a480d62ceddae8091b46b86bb8d0370206a49e9edf9cd16` |
+| hex    | `string`            | n/a                                                                  |
+| size   | `number`            | `320`                                                                |
 
 ### Example usage
 
@@ -126,17 +126,10 @@ const ignored = new Noun({
 	hash: '0x241aa473a95cb34fa4dc2d2c9b294ce9cc29a48b791f496b82341b937503fa69'
 });
 
-// changes the output of these previously used text strings
-const noun = new Noun({
-	text: 'Badu Blanc',
-	hash: '0x241aa473a95cb34fa4dc2d2c9b294ce9cc29a48b791f496b82341b937503fa69'
-});
+// produces two different Nouns due to hash, despite having same string
+const noun = new Noun({ text: 'Badu Blanc' });
 const noun2 = new Noun({
-	text: 'badublanc.eth',
-	hash: '0x241aa473a95cb34fa4dc2d2c9b294ce9cc29a48b791f496b82341b937503fa69'
-});
-const noun3 = new Noun({
-	text: '@badublanc',
+	text: 'Badu Blanc',
 	hash: '0x241aa473a95cb34fa4dc2d2c9b294ce9cc29a48b791f496b82341b937503fa69'
 });
 ```
