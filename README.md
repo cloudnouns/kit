@@ -1,4 +1,6 @@
-# 🌩 CLOUDNOUNS Kit
+# 🌩 @cloudnouns/kit
+
+![header](./static/header.png)
 
 The best way to build with [Nouns](https://nouns.wtf) and [Lil Nouns](https://lilnouns.wtf). ⌐◨-◨
 
