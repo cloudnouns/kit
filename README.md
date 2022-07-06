@@ -39,7 +39,7 @@ const noun = new Noun();
 ... and use generously.
 
 ```jsx
-<img src={myNoun.images.svg} alt="noun" />
+<img src={noun.images.svg} alt="noun" />
 ```
 
 ### Try it out
