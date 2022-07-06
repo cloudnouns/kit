@@ -46,6 +46,8 @@ Use the CodeSandbox links below to try out the library:
 - [Svelte](https://codesandbox.io/s/kit-example-svelte-87vekr)
 - [Vue](https://codesandbox.io/s/kit-example-vue-2vuvkr)
 
+See [our documentation](https://docs.cloudnouns.com) for full capabilities.
+
 ## Options
 
-See [our documentation](https://docs.cloudnouns.com) for full capabilities.
+...
