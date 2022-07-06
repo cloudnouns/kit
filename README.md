@@ -26,7 +26,7 @@ yarn add @cloudnouns/kit
 import { Noun } from '@cloudnouns/kit';
 ```
 
-... initialize a new Noun...
+... initialize Noun...
 
 ```js
 const myNoun = new Noun();
