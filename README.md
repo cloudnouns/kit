@@ -4,7 +4,7 @@
 
 The best way to build with [Nouns](https://nouns.wtf) and [Lil Nouns](https://lilnouns.wtf). ⌐◨-◨
 
-The CLOUDNOUNS Kit is a JavaScript library that makes creating Nouns dead simple.
+@cloudnouns/kit is a JavaScript library that makes creating Nouns dead simple.
 
 - 🔥 Create \*any\* Noun or Lil Noun.
 - 👩🏽‍🔬 Choose all, some, or no traits. Or make Nouns with invisible traits.
@@ -46,24 +46,54 @@ const noun = new Noun();
 
 Use the CodeSandbox links below to try out the library:
 
-- [React](https://codesandbox.io/s/kit-example-react-7wgzhy)
-- [Svelte](https://codesandbox.io/s/kit-example-svelte-87vekr)
-- [Vue](https://codesandbox.io/s/kit-example-vue-2vuvkr)
+- [React](https://codesandbox.io/s/kit-example-react-7wgzhy?file=/src/MyNoun.js)
+- [Svelte](https://codesandbox.io/s/kit-example-svelte-87vekr?file=/MyNoun.svelte)
+- [Vue](https://codesandbox.io/s/kit-example-vue-2vuvkr?file=/src/MyNoun.vue)
+- [Vanilla JS](https://codesandbox.io/s/kit-example-vanilla-sknszy?file=/src/index.js)
 
 For more information, check out [our documentation](https://docs.cloudnouns.com).
 
-## Props
+## Noun Properties
 
-Each prop is optional. If no props are provided, a random Noun will be generated and returned.
+| property | type     |                                                            |
+| -------- | -------- | ---------------------------------------------------------- |
+| `hex`    | `string` | hex color code. only set when `seed.background` equals `2` |
+| `images` | `object` | keys: `svg` (data url)                                     |
+| `seed`   | `object` | keys: `background`, `body`, `accessory`, `head`, `glasses` |
+| `size`   | `number` | dimensions (square) of the image                           |
+| `style`  | `string` | `classic` or `lil`                                         |
+| `url`    | `string` | url for hosted image of the Noun                           |
 
-| prop   | type                | default                                                              |
-| ------ | ------------------- | -------------------------------------------------------------------- |
-| style  | `string`            | `classic`                                                            |
-| traits | `object` or `array` | n/a                                                                  |
-| text   | `string`            | n/a                                                                  |
-| hash   | `string`            | `0xcc60b76e3f2389009a480d62ceddae8091b46b86bb8d0370206a49e9edf9cd16` |
-| hex    | `string`            | n/a                                                                  |
-| size   | `number`            | `320`                                                                |
+### Example
+
+```js
+const noun = new Noun({
+	traits: { head: 50, glasses: 7, background: 2 },
+	hex: 'dcff70'
+});
+
+// noun.hex = 'dcff70'
+// noun.images = { svg: 'data:image/svg+xml;base64...' }
+// noun.seed = { background: 2, head: 50, glasses: 7, ... } (body & accessory chosen at random)
+// noun.size = 320 (default)
+// noun.style = 'classic' (default)
+// noun.url = 'https://api.cloudnouns.com/v1/pfp?...`
+```
+
+[Preview this Noun in your browser!](https://api.cloudnouns.com/v1/pfp?background=2&head=50&glasses=7&hex=dcff70) Refresh the page for new combinations of the unspecified traits.
+
+## Options
+
+If no options are provided, a random Noun will be generated and returned.
+
+| prop     | type                |                                            |
+| -------- | ------------------- | ------------------------------------------ |
+| `style`  | `string`            | `classic` or `lil`                         |
+| `traits` | `object` or `array` | see below for example usage                |
+| `text`   | `string`            | any text. used to generate Noun seed       |
+| `hash`   | `string`            | must be a 0x-prefixed, valid, bytes32 hash |
+| `hex`    | `string`            | must be a valid hex color code             |
+| `size`   | `number`            | image dimensions (square)                  |
 
 ### Example usage
 
@@ -81,9 +111,18 @@ const lilnoun = new Noun({ style: 'lil' });
 #### `traits`
 
 ```js
-// object. each trait is optional.
-// unspecified traits are chosen at random.
+// each trait is optional. unspecified traits are chosen at random.
+
+// partial object.
 const noun = new Noun({
+	traits: {
+		head: 50,
+		glasses: 7
+	}
+});
+
+// full object
+const noun2 = new Noun({
 	traits: {
 		background: 1,
 		body: 15,
@@ -93,19 +132,8 @@ const noun = new Noun({
 	}
 });
 
-// invisible traits
-const noun2 = new Noun({
-	traits: {
-		accessory: 'n',
-		head: 'n'
-	}
-});
-
 // array. must include 5-valid values.
 const noun3 = new Noun({ traits: [1, 15, 94, 138, 5] });
-
-// invisible traits
-const noun4 = new Noun({ traits: [1, 15, 9000, 9000, 5] });
 ```
 
 #### `text`
